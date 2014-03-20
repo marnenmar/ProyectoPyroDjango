@@ -18,7 +18,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Principal',
-    'south'
+    'tastypie',
+    #'south'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -28,6 +29,11 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+)
+
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'plantillas'),
 )
 
 ROOT_URLCONF = 'Practica.urls'
@@ -59,3 +65,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
